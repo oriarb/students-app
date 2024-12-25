@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddStudentActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/view_header" />
+
+
+    <ImageView
+        android:id="@+id/student_image_view"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintVertical_bias="0.051"
+        app:srcCompat="@drawable/user_default_image"
+        tools:srcCompat="@drawable/user_default_image" />
+
+    <TextView
+        android:id="@+id/name_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Name :"
+        app:layout_constraintEnd_toStartOf="@+id/name_edit_text"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/student_image_view" />
+
+    <EditText
+        android:id="@+id/name_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Enter your name"
+        android:inputType="text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/name_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/name_text_view"
+        app:layout_constraintTop_toTopOf="@+id/name_text_view" />
+
+    <TextView
+        android:id="@+id/id_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="ID :"
+        app:layout_constraintEnd_toStartOf="@+id/name_edit_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name_text_view" />
+
+    <EditText
+        android:id="@+id/id_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Enter your id"
+        android:inputType="text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/id_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/name_edit_text"
+        app:layout_constraintTop_toTopOf="@+id/id_text_view" />
+
+    <TextView
+        android:id="@+id/phone_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Phone :"
+        app:layout_constraintEnd_toStartOf="@+id/name_edit_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_view" />
+
+    <EditText
+        android:id="@+id/phone_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Enter your phone number"
+        android:inputType="phone"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/phone_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/id_edit_text"
+        app:layout_constraintTop_toTopOf="@+id/phone_text_view" />
+
+    <TextView
+        android:id="@+id/address_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Address :"
+        app:layout_constraintEnd_toStartOf="@+id/name_edit_text"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_text_view" />
+
+    <EditText
+        android:id="@+id/address_edit_text"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Enter your address"
+        android:inputType="textPostalAddress"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/address_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/phone_edit_text"
+        app:layout_constraintTop_toTopOf="@+id/address_text_view" />
+
+    <CheckBox
+        android:id="@+id/checked_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:text="Checked"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address_text_view" />
+
+    <Button
+        android:id="@+id/save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/cancel" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/save"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
